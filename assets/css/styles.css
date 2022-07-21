@@ -1,0 +1,295 @@
+:root {
+    --card-width: ;
+    --cardThemeUrl: url(../images/jokercard.jpeg);
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../images/background.jpg);
+    background-attachment: fixed;
+}   
+
+body .modal {
+    width: 75vw;
+}
+
+main {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 110px;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    background-color: #4D581E;
+    z-index: 4;
+    height: 6rem;
+    font-family:'Poppins', sans-serif;
+    border-bottom: black solid 2px;
+}
+
+.sidenav {
+    width: 6rem;
+    border-right: solid black 1px;
+}
+
+.black-text {
+    font-size: 1.5rem;
+}
+
+.games, .game-play {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 3rem;
+    width: 100vw;
+    margin-top: 150px;
+}
+
+.game-play {
+    margin-top: 110px;
+}
+
+.jokes {
+    margin-top: 90px;
+}
+
+.game-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.1rem solid black;
+    border-radius: 1rem;
+    aspect-ratio: 2 / 3;
+    width: 10rem;
+    margin: 1rem;
+    margin-bottom: 1.5rem;
+    color: black;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    opacity: 1;
+   
+}
+
+.game-heading {
+    font-weight: 500;
+    width: 90%;
+    font-family:'Poppins', sans-serif;
+    padding: .5rem;
+    border-radius: 0.7rem;
+    border: black 1px solid;
+}
+
+.card-row {
+    padding: 1rem 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 150%;
+    left: -25%;
+}
+
+.card-back {
+    background-image: var(--cardThemeUrl);
+    background-size: 102% 101%;
+    background-position: center;
+    width: 15rem;
+    z-index: 0;
+}
+
+.card-row > img, .small-card {
+    height: 3.5rem;
+    margin: 0.5rem;
+    border-radius: 0.2rem;
+}
+
+.small-card {
+    border: 1px solid #000;
+}
+
+.delete-joke {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+}
+
+summary {
+    border: black solid 1px;
+    opacity: 0.9;
+    margin: 1rem;
+}
+
+#user-modal {
+    border: solid black 2px;
+}
+
+.modal-footer {
+    border-top: solid black 1px;
+}
+
+.theme {
+    display: inline;
+    margin-left: 1.75%;
+}
+
+.row {
+    text-align: center;
+}
+
+.deck {
+    width: 20%;
+    aspect-ratio: 2 / 3;
+    border: solid black 2px;
+    border-radius: 0.7rem;
+} 
+
+#rulesBox {
+    display: flex;
+    border: black solid 1px;
+    opacity: 0.7;
+    align-content: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+#myJokes {
+    margin-top: 4rem;
+    font-family:'Poppins', sans-serif;
+}
+
+#jokeBox {
+    border: solid black 1px;
+    width: 22rem;
+    flex-direction: column;
+}
+
+#bottomCardRow {
+    border: black 2px solid;
+    background-color: #8E7044;
+    z-index: 4;
+}
+
+.userDeck {
+    opacity: 1;
+}
+
+.gameBox {
+    opacity: 1;
+    border: solid black 1px;;
+    background-image:url(../images/fleur.jpeg);
+
+}
+
+.gameBox:hover {
+    transform: scale(1);
+}
+
+.userDeck:hover {
+    transform: scale(1);
+}
+
+.selected-theme {
+
+    border: 0.5rem solid #ff6d00;
+
+}
+
+.welcome {
+    position: absolute;
+    top: 6.5rem;
+    right: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+#jokeBox {
+    display: flex;
+    justify-content: center;
+    border: 0;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: blue;
+}
+
+#joke-container {
+    font-size: 1.2rem;
+
+}
+.label {
+    background-color: rgba(0, 0, 0, 0.309);
+    color: white;
+    margin: 1rem;
+    padding: .5em;
+}
+
+.game-over {
+    text-align: center;
+    margin-top: 110px;
+    background-color: #1E5848;
+}
+
+.restart-btn {
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+    .deck {
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+   .brand-logo {    
+        font-size: 1.5rem !important;
+    }
+    .mobile-card {
+        width: 20vw !important;
+    }
+    .drawPile {
+        order: 1;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .drawnCard {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .game-card {
+        border-radius: 0.4rem;
+    }
+
+   }
+
+ 
+
+

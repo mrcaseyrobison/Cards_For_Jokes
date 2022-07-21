@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Materialize CSS Framework -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <title>Cards for Jokes</title>
+  </head>
+  <body class="flow-text">
+
+    <!-- Navbar  -->
+    <nav class="nav-wrapper valign-wrapper">
+      <div class="container">
+        <a href="#" class="brand-logo white-text">Cards for Jokes</a>
+        <a href="#" class="sidenav-trigger black-text" data-target="mobile-links">
+          <i class="material-icons white-text">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a class="white-text" href="index.html"><i class="material-icons left white-text">home</i>Home</a></li>
+            <li><a class="white-text" href="highscores.html"><i class="material-icons left white-text">scoreboard</i>High Scores</a></li>
+            <li><a class="white-text" href="myjokes.html"><i class="material-icons left white-text">speaker_notes</i>My Jokes</a></li>
+          </ul>
+      </div>
+    </nav>
+    <!-- Side nav trigger for small screens -->
+    <ul class="sidenav lime darken-2 center-align white-text" id="mobile-links">
+        <li><a href="index.html"><i class="material-icons left white-text">home</i></a></li>
+        <li><a href="highscores.html"><i class="material-icons left white-text">view_list</i></a></li>
+        <li><a href="myjokes.html"><i class="material-icons left white-text">gamepad</i></a></li>
+    </ul>
+    <main>
+      <div class="games container">
+    <!-- Game Choices -->
+    <div id="welcome-display" class="welcome invisible">
+      <img id="theme-display" src="./assets/images/jokercard.jpeg" alt="Deck Theme" class="small-card">
+      Welcome&nbsp;
+      <span id="user-name"></span>
+      &nbsp;
+      <button id="change-user-settings" class="waves-effect waves-light btn brown darken-4 white-text">Change</button>
+    </div>
+        <!-- High Card Wins -->
+        <div class="center-align gameTile">
+          <a id="highCardGame" class="game-heading game-card card-back card-overlay z-depth-3" href="">
+            <h5 class="game-heading card name orange accent-4">High Card</h5>
+          </a>
+          <details>
+            <summary class="brown darken-4 white-text">Rules</summary>
+            <ul id="rulesBox" class="grey darken-3 white-text">
+              <div class="row">
+                <div id="rules" class="col">              
+                    <div class="card-content">
+                      <p>High card wins.</p>
+                    </div>                  
+                </div>
+              </div>
+            </ul>
+          </details>
+        </div>
+
+        <!-- War -->
+        <div class="center-align gameTile hidden">
+          <a data-target="modal1" class="game-heading game-card card-back card-overlay z-depth-3" href="#">
+            <h5 data-target="modal1" class="game-heading card name orange accent-4">War</h5>
+          </a>
+          <details>
+            <summary class="brown darken-4 white-text">Rules</summary>
+            <ul id="rulesBox" class="grey darken-3 white-text">
+              <div class="row">
+                <div id="rules" class="col">              
+                    <div class="card-content">
+                      <p>Coming Soon</p>
+                    </div>                  
+                </div>
+              </div>
+            </ul>
+          </details>
+        </div>
+
+        <!-- Black Jack -->
+        <div class="center-align gameTile hidden">
+          <a data-target="modal1" class="game-heading game-card card-back card-overlay z-depth-3" href="#">
+            <h5 data-target="modal1" class="game-heading card name orange accent-4">Black Jack</h5>
+          </a>
+          <details>
+            <summary class="brown darken-4 white-text">Rules</summary>
+            <ul id="rulesBox" class="grey darken-3 white-text">
+              <div class="row">
+                <div id="rules" class="col">              
+                    <div class="card-content">
+                      <p>Coming Soon</p>
+                    </div>                  
+                </div>
+              </div>
+            </ul>
+          </details>
+        </div>
+
+        <!-- Solitaire -->
+        <div class="center-align gameTile hidden">
+          <a data-target="modal1" class="game-heading game-card card-back card-overlay z-depth-3" href="#">
+            <h5 data-target="modal1" class="game-heading card name orange accent-4">Solitaire</h5>
+          </a>
+          <details>
+            <summary class="brown darken-4 white-text">Rules</summary>
+            <ul id="rulesBox" class="grey darken-3 white-text">
+              <div class="row">
+                <div id="rules" class="col">              
+                    <div class="card-content">
+                      <p>Coming Soon</p>
+                    </div>                  
+                </div>
+              </div>
+            </ul>
+          </details>
+        </div>
+      </div>
+      <div class="card-row" id="bottomCardRow"></div>
+    </main>
+
+     <!-- Modal Structure -->
+  <div id="user-modal" class="modal">
+    <div class="modal-content center-align">
+        <div class="form-group">
+            <h6>Who is playing?</h6>
+            <input type="text" id="username-entry" class="form-control" placeholder="Enter your name here"
+              required />
+          </div>
+      <h6>Pick your theme:</h6>
+    </div>
+   <div class="row">
+        <div class="theme"><img data-theme="0" class="deck" src="https://deckofcardsapi.com/static/img/back.png"></div>
+        <div class="theme"><img data-theme="1" class="deck" src="./assets/images/batman-deck-theme.jpg"></div>
+        <div class="theme"><img data-theme="2" class="deck" src="./assets/images/awkward-turtle-deck-theme.jpg"></div>
+        <div class="theme"><img data-theme="3" class="deck" src="./assets/images/mountain-deck-theme.jpg"></div>
+        <div class="theme"><img data-theme="4" class="deck" src="./assets/images/humming-bird-deck-theme.jpg"></div>
+        <div class="theme"><img data-theme="5" class="deck" src="./assets/images/mountain-deck-theme-2.jpg"></div>
+        <div class="theme"><img data-theme="6" class="deck" src="./assets/images/jokercard.jpeg"></div>
+    </div>
+    <div class="modal-footer orange accent-4">
+      <span id="name-entry-error"></span>
+      <button id="play-game" class="waves-effect waves-light btn brown darken-4 white-text">PLAY GAME</button>
+      <button id="save-user-settings" class="waves-effect waves-light btn brown darken-4 white-text hidden">Save</button>
+    </div>
+  </div>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

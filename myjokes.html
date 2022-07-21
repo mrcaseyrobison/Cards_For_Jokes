@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Materialize CSS Framework -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <title>My Jokes</title>
+  </head>
+  <body class="flow-text">
+
+    <!-- Navbar  -->
+    <nav class="nav-wrapper valign-wrapper">
+      <div class="container">
+        <a href="#" class="brand-logo white-text">Cards for Jokes</a>
+        <a href="#" class="sidenav-trigger black-text" data-target="mobile-links">
+          <i class="material-icons white-text">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a class="white-text" href="index.html"><i class="material-icons left white-text">home</i>Home</a></li>
+            <li><a class="white-text" href="highscores.html"><i class="material-icons left white-text">scoreboard</i>High Scores</a></li>
+            <li><a class="white-text" href="myjokes.html"><i class="material-icons left white-text">speaker_notes</i>My Jokes</a></li>
+          </ul>
+      </div>
+    </nav>
+
+    <!-- Side nav trigger for small screens -->
+    <ul class="sidenav lime darken-2 center-align white-text" id="mobile-links">
+        <li><a href="index.html"><i class="material-icons left white-text">home</i></a></li>
+        <li><a href="highscores.html"><i class="material-icons left white-text">view_list</i></a></li>
+        <li><a href="myjokes.html"><i class="material-icons left white-text">gamepad</i></a></li>
+    </ul>
+
+    <!--Content-->
+    <main>
+      <div id="myJokes">
+        <h1 style="text-align: center;"> My Jokes </h1>
+        <h5>Click a card to reveal one of your saved jokes</h5>
+      </div>
+      <div class="jokes container" id="joke-container"></div>
+      <!--Dummy Content to be replaced with JS-->
+    
+      <div class="card-row" id="bottomCardRow"></div>
+    </div>
+    
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/myjokes.js"></script>
+  </body>
+</html>

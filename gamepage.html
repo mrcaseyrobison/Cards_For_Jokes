@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Materialize CSS Framework -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <title>Cards for Jokes</title>
+  </head>
+  <body class="flow-text">
+
+    <!-- Navbar  -->
+    <nav class="nav-wrapper valign-wrapper">
+      <div class="container">
+        <a href="#" class="brand-logo white-text">Cards for Jokes</a>
+        <a href="#" class="sidenav-trigger black-text" data-target="mobile-links">
+          <i class="material-icons white-text">menu</i>
+        </a>
+         
+        <ul class="right hide-on-med-and-down">
+            <li><a class="white-text" href="index.html"><i class="material-icons left white-text">home</i>Home</a></li>
+            <li><a class="white-text" href="highscores.html"><i class="material-icons left white-text">scoreboard</i>High Scores</a></li>
+            <li><a class="white-text" href="myjokes.html"><i class="material-icons left white-text">speaker_notes</i>My Jokes</a></li>
+            <!-- Temporary Modal Trigger
+            <li class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</li> -->
+          </ul>
+      </div>
+    </nav>
+
+    <!-- Side nav trigger for small screens -->
+    <ul class="sidenav lime darken-2 center-align white-text" id="mobile-links">
+        <li><a href="index.html"><i class="material-icons left white-text">home</i></a></li>
+        <li><a href="highscores.html"><i class="material-icons left white-text">view_list</i></a></li>
+        <li><a href="myjokes.html"><i class="material-icons left white-text">gamepad</i></a></li>
+    </ul>
+    <main>
+      <div class="game-play container" id="game-play-container">
+        <div class="center-align drawnCard">
+            <div class="game-card card-back mobile-card card-overlay z-depth-3 gameBox" id="user-card">
+            </div>
+            <p class="label">User</p>
+          </div>
+          <div class="center-align drawPile">
+            <a class="game-card card-back mobile-card card-overlay z-depth-3 userDeck" id="center-theme" href="#">
+            </a>
+            <p class="label">Deck</p>
+          </div>
+          <div class="center-align drawnCard">
+            <div class="game-card card-back mobile-card card-overlay z-depth-3 gameBox" id="computer-card">
+            </div>
+            <p class="label">Computer</p>
+          </div>
+      </div>
+      <div id="lose-tie" class="black-text center-align">Click the deck to draw a card</div>
+      <div id="game-end"></div>
+      <div class="card-row" id="bottomCardRow"></div>
+    </main>
+
+     <!--Modal Structure-->
+  <div id="jokeModal" class="modal">
+    <div class="modal-content center-align">
+      <h6>You Win!</h6>
+      <h6>Here is a hilarious joke!</h6>
+      <div id="jokeBox"></div>
+    </div>
+    <div class="modal-footer orange accent-4">
+      <h5 href="#" class="modal-close waves-effect waves-light btn brown darken-4 white-text" id="hilarious">SAVE JOKE</h5>
+      <h5 href="#" class="modal-close waves-effect waves-effect waves-light btn brown darken-4 white-text">NOT HILARIOUS!</h5>
+    </div>
+    </div>
+  </div>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/gamepage.js"></script>
+  </body>
+</html>
